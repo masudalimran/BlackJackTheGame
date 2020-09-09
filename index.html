@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Black Jack Games</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>BlackJack: The Game</h2>
+        <h3><span id="blackjack-result">Let's play</span></h3>
+        <button id="rulesDesc" class="btn btn-danger mb-2"><i><b>Rules</b></i></button>
+
+        <div id="displayRules" style="border: 1px solid black; display: none; margin-bottom:10px;">
+            <ul style="text-align: left;">
+                <li>
+                    <b>Your goal is to score the highest points possible within 1-21.</b>
+                </li>
+                <li>
+                    <b> Each numbered card 2-10 adds point equivalent to their points.</b>
+                </li>
+                <li>
+                    <b>King, Queen, Jack = 10 points each.</b>
+                </li>
+                <li>
+                    <b>Ace can be both 1 or 11. if your point is less than 10 it will add 11 points. If not it will add 1 point. </b>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="flex-blackjack-row-1">
+            <div id="your-box">
+                <h2>You: <span id="your-blackjack-result">0</span></h2>
+            </div>
+
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+        </div>
+
+        <div class="flex-blackjack-row-2">
+            <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">Stand</button>
+                <button class="btn-lg btn-danger" id="blackjack-deal-button">Deal</button>
+            </div>
+        </div>
+
+        <div class="flex-blackjack-row-3">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draws</th>
+                </tr>
+                <tr>
+                    <td> <span id="wins">0</span></td>
+                    <td> <span id="losses">0</span></td>
+                    <td> <span id="draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/js/scipts.js"></script>
+</body>
